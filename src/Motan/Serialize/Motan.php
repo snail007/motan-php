@@ -147,6 +147,8 @@ class Motan implements \Motan\Serializer
             }
         } elseif (is_null($params)) {
             $buffer .= pack('C', Constants::DTYPE_NULL);
+        }else{
+            throw new \Exception("unsupported parameter type");
         }
     }
 
